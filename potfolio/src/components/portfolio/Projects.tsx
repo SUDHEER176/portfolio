@@ -36,13 +36,12 @@ const projects = [
   },
   {
     n: "04",
-    title: "Mental health",
-    tag: "Real-time",
-    desc: "Real-time vehicle tracking with live maps, historical playback, and admin dashboards. Built during my internship at AddWise.",
-    stack: ["PHP", "MySQL", "Leaflet.js"],
-    github: "https://github.com/SUDHEER176/GPS-Tracking-System",
-    live: "#",
-
+    title: "Mental health Chatbot",
+    tag: "AI / ML",
+    desc: "An AI-powered mental health chatbot that provides emotional support through natural language conversations. It analyzes user inputs using NLP techniques to detect mood, offer coping strategies, and guide users with helpful resources in real-time.",
+    stack: ["Python", "Flask", "scikit-learn", "NLP"],
+    github: "https://github.com/SUDHEER176/mindful-companion",
+    live: "https://mindchat-zpnk.vercel.app/",
     accent: "from-fuchsia-500/30 to-transparent",
   },
   {
