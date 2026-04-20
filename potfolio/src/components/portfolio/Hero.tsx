@@ -76,7 +76,7 @@ export function Hero() {
             Contact Me
           </a>
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1XyfLeofNlnDFcrDe13M_4QtIFUB4rD7s/view?usp=sharing"
             className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors magnetic-link"
           >
             <Download className="size-3.5" /> Resume.pdf
