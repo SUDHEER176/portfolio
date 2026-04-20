@@ -30,13 +30,12 @@ const projects = [
     desc: "Real-time vehicle tracking with live maps, historical playback, and admin dashboards. Built during my internship at AddWise.",
     stack: ["PHP", "MySQL", "Leaflet.js"],
     github: "https://github.com/SUDHEER176/GPS-Tracking-System",
-    live: "#",
-
+    live: "",
     accent: "from-fuchsia-500/30 to-transparent",
   },
   {
     n: "04",
-    title: "Mental health Chatbot",
+    title: "Mental Health Chatbot",
     tag: "AI / ML",
     desc: "An AI-powered mental health chatbot that provides emotional support through natural language conversations. It analyzes user inputs using NLP techniques to detect mood, offer coping strategies, and guide users with helpful resources in real-time.",
     stack: ["Python", "Flask", "scikit-learn", "NLP"],
@@ -46,14 +45,13 @@ const projects = [
   },
   {
     n: "05",
-    title: "carrer maping",
-    tag: "Real-time",
-    desc: "Real-time vehicle tracking with live maps, historical playback, and admin dashboards. Built during my internship at AddWise.",
-    stack: ["PHP", "MySQL", "Leaflet.js"],
-    github: "https://github.com/SUDHEER176/GPS-Tracking-System",
-    live: "#",
-
-    accent: "from-fuchsia-500/30 to-transparent",
+    title: "Career Mapping",
+    tag: "AI / ML",
+    desc: "An AI-driven career path navigator that generates personalized roadmaps, skill gap analyses, and action plans powered by an LLM backend.",
+    stack: ["React", "FastAPI", "Python", "Groq LLM"],
+    github: "https://github.com/SUDHEER176/careermap-ai",
+    live: "",
+    accent: "from-emerald-500/30 to-transparent",
   },
 ];
 
@@ -76,45 +74,43 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group relative flex flex-col h-full rounded-2xl border border-border bg-card/50 overflow-hidden hover:border-primary/50 transition-all duration-300 transform-gpu"
+              onClick={() => {
+                if (p.live) window.open(p.live, "_blank", "noopener,noreferrer");
+              }}
+              className={`group relative flex flex-col h-full rounded-2xl border border-border bg-card/50 overflow-hidden hover:border-primary/50 transition-all duration-300 transform-gpu ${p.live ? "cursor-pointer" : "cursor-default"}`}
             >
-              {/* 1. Background gradient layer (behind everything) */}
+              {/* Background gradient */}
               <div className={`absolute inset-0 bg-gradient-to-br ${p.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
-              
-              {/* 2. The main "Live Demo" link covering the whole card (z-10) */}
-              <a 
-                href={p.live} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="absolute inset-0 z-10 cursor-pointer" 
-                aria-label={`View ${p.title} live demo`}
-              />
 
-              {/* 3. The Content (z-20, pointer-events-none so click passes through to the Live link) */}
-              <div className="relative z-20 p-6 flex flex-col h-full pointer-events-none">
+              {/* Card content */}
+              <div className="relative p-6 flex flex-col h-full">
                 <div className="flex items-start justify-between mb-4">
                   <span className="font-display text-4xl font-bold text-stroke opacity-50">{p.n}</span>
                   
-                  {/* 4. Action Buttons (z-30, pointer-events-auto so they ARE clickable) */}
-                  <div className="flex gap-2 pointer-events-auto">
+                  {/* Action Buttons */}
+                  <div className="flex gap-2">
                     <a
                       href={p.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 rounded-full border border-border bg-background/50 backdrop-blur-sm hover:bg-foreground hover:text-background transition-colors relative z-30"
+                      onClick={(e) => e.stopPropagation()}
+                      className="p-2 rounded-full border border-border bg-background/50 backdrop-blur-sm hover:bg-foreground hover:text-background transition-colors"
                       title="View Code"
                     >
                       <Github className="size-4" />
                     </a>
-                    <a
-                      href={p.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform relative z-30"
-                      title="Live Demo"
-                    >
-                      <ArrowUpRight className="size-4" />
-                    </a>
+                    {p.live && (
+                      <a
+                        href={p.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="p-2 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform"
+                        title="Live Demo"
+                      >
+                        <ArrowUpRight className="size-4" />
+                      </a>
+                    )}
                   </div>
                 </div>
 
