@@ -1,7 +1,7 @@
 [build]
   base = "potfolio"
   command = "npm install --include=dev && npm run build"
-  publish = ".output/public"
+  publish = "dist/client"
 
 [build.environment]
   NODE_VERSION = "20"
