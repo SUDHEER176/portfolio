@@ -57,10 +57,10 @@ export function Contact() {
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
             className="col-span-12 md:col-span-5 space-y-4"
           >
-            <Info icon={Mail} label="Email" value="[sudhirvasamsetti2@gmail.com]" href="mailto:[sudhirvasamsetti2@gmail.com]" />
+            <Info icon={Mail} label="Email" value="sudhirvasamsetti2@gmail.com" href="mailto:sudhirvasamsetti2@gmail.com" />
             <Info icon={MapPin} label="Location" value="Andhra Pradesh, India" />
             <Info icon={Github} label="GitHub" value="@SUDHEER176" href="https://github.com/SUDHEER176" />
-            <Info icon={Linkedin} label="LinkedIn" value="V Sudheer" href="linkedin.com/in/sudheer-vasamsetti-7b7a4b291" />
+            <Info icon={Linkedin} label="LinkedIn" value="V Sudheer" href="https://linkedin.com/in/sudheer-vasamsetti-7b7a4b291" />
           </motion.aside>
         </div>
       </div>
