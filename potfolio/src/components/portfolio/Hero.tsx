@@ -86,9 +86,9 @@ export function Hero() {
 
           <div className="ml-auto flex items-center gap-2">
             {[
-              { icon: Github, href: "https://github.com", label: "GitHub" },
-              { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-              { icon: Mail, href: "#contact", label: "Email" },
+              { icon: Github, href: "https://github.com/SUDHEER176", label: "GitHub" },
+              { icon: Linkedin, href: "linkedin.com/in/sudheer-vasamsetti-7b7a4b291", label: "LinkedIn" },
+              { icon: Mail, href: "[sudhirvasamsetti2@gmail.com]", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
